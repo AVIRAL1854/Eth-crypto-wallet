@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HTML: <div class="loader"></div> */
+.loader {    
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%; 
+  background:
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    radial-gradient(var(--r1) var(--r2) at bottom,#269af2 79.5%,#0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%,0% 0%,100% 0%;
+  background-repeat:no-repeat;
+  animation: l9 2s infinite linear;
+}
+@keyframes l9 {
+    33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
+    66%  {background-position: -100%  66%,0%   66% ,100% 66% }
+    100% {background-position:    0% 100%,100% 100%,200% 100%}
+}
+
+
+
+.x-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 3px solid red;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spinCircle 3s infinite;
+}
+
+.x-circle::before,
+.x-circle::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 8px; /* Made lines broader */
+  background-color: red;
+  opacity: 0;
+  animation: drawX 3s infinite;
+}
+
+.x-circle::before {
+  transform: rotate(45deg);
+  animation-delay: 1s; /* Starts after circle spin */
+}
+
+.x-circle::after {
+  transform: rotate(-45deg);
+  animation-delay: 1.2s; /* Slightly delayed from first line */
+}
+
+@keyframes spinCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes drawX {
+  0%, 30% {
+    opacity: 0;
+    width: 0;
+  }
+  35% {
+    opacity: 1;
+    width: 0;
+  }
+  45%, 85% {
+    opacity: 1;
+    width: 60%;
+  }
+  90%, 100% {
+    opacity: 0;
+    width: 60%;
+  }
+}
