@@ -36,7 +36,7 @@ Choose between encrypted cloud and local backup options to ensure your assets ar
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Eth-crypto-wallet.git
+   git clone https://github.com/AVIRAL1854/Eth-crypto-wallet.git
    ```
 
 2. Navigate to the project directory:
@@ -56,7 +56,7 @@ Choose between encrypted cloud and local backup options to ensure your assets ar
 
 5. Open your browser and navigate to:
    ```
-   http://localhost:3000
+   http://localhost:port
    ```
 
 ---
