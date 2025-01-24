@@ -26,7 +26,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const [walletAddress, setWalletAddress] = useState(
-    "0x19cd69dB1Dd744eec876fbB23D9c8c818e260edD"
+    ""
   );
   const [walletBalance, setWalletBalance] = useState("");
   const [privateKey, setPrivateKey] = useState("");
@@ -41,7 +41,7 @@ const Dashboard = () => {
   const [sendSuccess, setSendSuccess] = useState(false);
   const [sendError, setSendError] = useState(false);
 
-  const [rpc_link, setRpc_Link] = useState(rpcList[0].url);
+  const [rpc_link, setRpc_Link] = useState(rpcList[1].url);
 
   const sendTransactionHandler = async (receiverAddress, amount, remarks) => {
     try {
@@ -62,7 +62,7 @@ const Dashboard = () => {
         privateKey,
         amount,
         receiverAddress,
-        rpcList[2].url
+        rpc_link
 
       );
 

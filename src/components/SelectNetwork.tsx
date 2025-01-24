@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { rpcList } from "./RPC_list";
 const SelectNetwork = ({setLinker}) => {
-  const [network, setNetwork] = useState("Linea Sepolio Mainnet");
-  const [networkName, setNetworkName] = useState("Linea Sepolio Mainnet");
+  const [network, setNetwork] = useState("---");
+  const [networkName, setNetworkName] = useState("---");
   const [openList, setOpenList] = useState(false);
 
   const [rpcListSelect, setRpcListSelect] = useState(rpcList);

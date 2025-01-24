@@ -1,8 +1,8 @@
 import { ethers } from "ethers";
-import { rpcLink } from "../RPC_list";
+// import { rpcLink } from "../RPC_list";
 
 
-const newWallet = async (rpcLink) => {
+const newWallet = async (rpcLink:string) => {
   try {
    
     const provider = new ethers.JsonRpcProvider(rpcLink);
@@ -19,7 +19,9 @@ const newWallet = async (rpcLink) => {
 
     const connectedWallet = wallet.connect(provider);
     const balance = await provider.getBalance(walletAddress);
-    const mnemonic = connectedWallet.mnemonic.phrase;
+   
+      const mnemonic = connectedWallet.mnemonic.phrase;
+   
 
     console.log(
       "wallet Balance:",
@@ -31,7 +33,7 @@ const newWallet = async (rpcLink) => {
       mnemonic,
     };
     return accountInfo;
-  } catch (e) {
+  } catch (error) {
     throw new Error("account not created with error" + error.message);
   }
 };

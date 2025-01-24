@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -97,7 +97,7 @@ const LandingPage = () => {
     setShowAccountOptions(true);
   };
 
-  const createAccount = (type) => {
+  const createAccount = (type:string) => {
     switch (type) {
       case "simple":
         navigate("/login");
