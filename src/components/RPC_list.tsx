@@ -8,16 +8,19 @@ export const rpcList = [
   },
   {
     name: "Mainnet",
-    url: "https://rpc.ankr.com/eth",
+    // url: "https://rpc.ankr.com/eth",
+    url: "https://eth-mainnet.g.alchemy.com/v2/demo",
   },
   {
     name: "Linea Sepolio Testnet",
-    // url: "https://linea-sepolia.infura.io/v3/636ac7bca78947ada77106394081c932",
-    url: "https://rpc.ankr.com/eth_sepolia",
+    // url: "https://linea-sepolia.infura.io/v3/---",
+    // url: "https://rpc.ankr.com/eth_sepolia",
+    url: "https://eth-sepolia.g.alchemy.com/v2/demo",
   },
   {
     name: "holesky Testnet",
-    
-    url: "https://rpc.ankr.com/eth_holesky",
+
+    // url: "https://rpc.ankr.com/eth_holesky",
+    url: "https://eth-holesky.g.alchemy.com/v2/demo",
   },
 ];
